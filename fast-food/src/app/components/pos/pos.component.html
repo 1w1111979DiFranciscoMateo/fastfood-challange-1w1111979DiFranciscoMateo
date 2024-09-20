@@ -1,0 +1,18 @@
+<div class="container">
+    <h2 class="text-center">Componente Point of Sell:</h2>
+    <form #form="ngForm" (ngSubmit)="save(form)">
+        <div class="mb-3">
+            <label for="nombre" class="form-lable">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" class="form-control" required
+            #nombre="ngModel" [(ngModel)]="order.name">
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-lable">Descripción:</label>
+            <input type="text" name="description" id="description" class="form-control" required
+            #pedido="ngModel" [(ngModel)]="order.description">
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-primary" type="submit">Ordenar</button>
+        </div>
+    </form>
+</div>
